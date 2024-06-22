@@ -1,13 +1,3 @@
-const data = [
-    { userId: 1, activityType: 'login', timestamp: '2024-06-14T10:00:00Z' },
-    { userId: 2, activityType: 'logout', timestamp: '2024-06-14T10:05:00Z' },
-    { userId: 1, activityType: 'view', timestamp: '2024-06-14T10:10:00Z' },
-    { userId: 3, activityType: 'login', timestamp: '2024-06-14T10:15:00Z' },
-    { userId: 2, activityType: 'login', timestamp: '2024-06-14T10:20:00Z' },
-    { userId: 1, activityType: 'logout', timestamp: '2024-06-14T10:25:00Z' },
-    { userId: 3, activityType: 'view', timestamp: '2024-06-14T10:30:00Z' },
-];
-
 function countUniqueUsers(data) {
     const uniqueUsers = new Set(data.map(entry => entry.userId));
     return uniqueUsers.size;
@@ -45,7 +35,3 @@ function generateUserTimelines(data) {
     
     return userTimelines;
 }
-
-console.log("Number of unique users:", countUniqueUsers(data));
-console.log("Most common activity type:", mostCommonActivityType(data));
-console.log("User timelines:", generateUserTimelines(data));
